@@ -12,6 +12,9 @@ export default {};
 
 <style lang="less" scoped>
 .about {
+  h1 {
+    font-size: 34 / @q;
+  }
   .content {
     color: @title-color;
   }
