@@ -7,7 +7,12 @@
 </template>
 
 <script>
-export default {};
+export default {
+  mounted(){
+    const a = 'asd';
+    console.log('mounted ---- ');
+  }
+};
 </script>
 
 <style lang="less" scoped>
