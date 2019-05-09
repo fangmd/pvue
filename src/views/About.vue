@@ -8,10 +8,10 @@
 
 <script>
 export default {
-  mounted(){
+  mounted() {
     const a = 'asd';
     console.log('mounted ---- ');
-  }
+  },
 };
 </script>
 
