@@ -7,10 +7,16 @@
 </template>
 
 <script>
+import { common } from '@/api';
 export default {
   mounted() {
     const a = 'asd';
     console.log('mounted ---- ');
+
+    common
+      .getUser()
+      .then(resp => {})
+      .catch(error => {});
   },
 };
 </script>
