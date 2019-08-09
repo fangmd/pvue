@@ -3,6 +3,7 @@ const CompressionPlugin = require('compression-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
+  //publicPath: '/dist/',
   assetsDir: 'static',
   configureWebpack: config => {
     if (process.env.NODE_ENV === 'production') {
@@ -48,5 +49,6 @@ module.exports = {
         target: 'http://接口服务器地址',
       },
     },
+    before: process.env.VUE_APP_MOCK === 'true' ? require('./mock') : null,
   },
 };

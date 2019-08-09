@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
+    "serve:mock": "vue-cli-service serve --mode mock",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "test:unit": "vue-cli-service test:unit"
@@ -12,6 +13,7 @@
     "axios": "^0.18.0",
     "core-js": "^2.6.5",
     "fastclick": "^1.0.6",
+    "mockjs": "^1.0.1-beta3",
     "normalize.css": "^8.0.1",
     "vue": "^2.6.10",
     "vue-router": "^3.0.3",
