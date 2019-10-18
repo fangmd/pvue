@@ -8,13 +8,15 @@ import axios from 'axios';
 // 创建axios实例
 var instance = axios.create({
   timeout: 1000 * 10,
+  headers: {
+    get: {
+      'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8',
+    },
+    post: {
+      'Content-Type': 'application/json;charset=utf-8',
+    },
+  },
 });
-
-instance.defaults.headers.common = {
-  'X-Requested-With': 'XMLHttpRequest',
-};
-// instance.defaults.headers.post['Content-Type'] =
-//   'application/x-www-form-urlencoded';
 
 // add global params
 // instance.defaults.params = {}
