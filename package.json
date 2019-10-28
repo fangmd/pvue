@@ -8,7 +8,7 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "test:unit": "vue-cli-service test:unit",
-    "analyz": "NODE_ENV=production npm_config_report=true npm run build"
+    "analyze": "npm_config_report=true vue-cli-service build --mode analyze"
   },
   "dependencies": {
     "axios": "^0.18.1",

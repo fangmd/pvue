@@ -1,15 +1,17 @@
 const path = require('path');
 const CompressionPlugin = require('compression-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
-// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
-//   .BundleAnalyzerPlugin;
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
+  .BundleAnalyzerPlugin;
 
 module.exports = {
   //publicPath: '/dist/',
   assetsDir: 'static',
   configureWebpack: config => {
     if (process.env.NODE_ENV === 'production') {
-      // config.plugins.push(new BundleAnalyzerPlugin());
+      if (process.env.ANALYZ_ENV) {
+        config.plugins.push(new BundleAnalyzerPlugin());
+      }
       //压缩插件
       config.plugins.push(
         new CompressionPlugin({
