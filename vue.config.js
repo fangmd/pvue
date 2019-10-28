@@ -32,6 +32,7 @@ module.exports = {
       config.devtool = 'source-map';
     }
   },
+  productionSourceMap: false,
   pluginOptions: {
     'style-resources-loader': {
       preProcessor: 'less',
