@@ -44,7 +44,6 @@ export default {
           this.$refs.video.srcObject = stream;
           this.$refs.video.setAttribute('playsinline', true); // required to tell iOS safari we don't want fullscreen
           this.$refs.video.play();
-          // requestAnimationFrame(this.tick);
           setTimeout(() => {
             this.tick();
           }, 300);
@@ -56,7 +55,6 @@ export default {
     },
     tick() {
       console.log('tick');
-
       this.loadingMessage = '⌛ Loading video...';
       const video = this.$refs.video;
       const canvasElement = this.$refs.canvas;
@@ -107,6 +105,7 @@ export default {
             code.location.topLeftCorner,
             '#FF3B58'
           );
+          // 获取到的数据
           this.outputData = code.data;
         } else {
           // 没有获取到二维码数据
@@ -125,10 +124,6 @@ export default {
       canvas.lineWidth = 4;
       canvas.strokeStyle = color;
       canvas.stroke();
-    },
-
-    screenShot() {
-      // 切图，解析二维码
     },
   },
 };
