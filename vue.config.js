@@ -3,6 +3,7 @@ const CompressionPlugin = require('compression-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
   .BundleAnalyzerPlugin;
+const selfSigned = require('openssl-self-signed-certificate');
 
 module.exports = {
   //publicPath: '/dist/',
@@ -48,7 +49,10 @@ module.exports = {
     open: process.platform === 'darwin',
     host: '0.0.0.0',
     port: 8012,
-    https: false,
+    https: {
+      key: selfSigned.key,
+      cert: selfSigned.cert,
+    },
     hotOnly: false,
     proxy: {
       '/api': {

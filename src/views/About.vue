@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import { common } from '@/api';
+// import { common } from '@/api';
 import _ from 'lodash';
 
 export default {
@@ -22,11 +22,11 @@ export default {
     };
   },
   mounted() {
-    const a = 'asd';
-    common
-      .getUser()
-      .then(resp => {})
-      .catch(error => {});
+    // const a = 'asd';
+    // common
+    //   .getUser()
+    //   .then(resp => {})
+    //   .catch(error => {});
   },
   methods: {
     debounce: _.debounce(function() {
