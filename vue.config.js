@@ -21,11 +21,11 @@ module.exports = {
           deleteOriginalAssets: false, //不删除源文件
         })
       );
-      config.plugins.push(
+      config.optimization.minimizer.push(
         new UglifyJsPlugin({
           uglifyOptions: {
+            warnings: false,
             compress: {
-              warnings: false,
               drop_debugger: true,
               drop_console: true,
             },

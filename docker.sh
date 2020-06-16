@@ -2,7 +2,7 @@
 
 echo "start npm run install & npm run build"
 
-npm run install & npm run build
+npm install & npm run build
 
 container=$(docker container ls -a | grep vuenginxnew)
 if [ -n "$container" ]; then
