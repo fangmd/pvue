@@ -2,6 +2,7 @@
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png" />
     <HelloWorld msg="Welcome to Your Vue.js App" />
+    <p class="head-one">标题</p>
   </div>
 </template>
 
@@ -22,3 +23,9 @@ export default {
   },
 };
 </script>
+
+<style lang="less" scoped>
+.head-one {
+  font-size: 50 / @q;
+}
+</style>
