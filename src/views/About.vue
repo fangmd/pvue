@@ -5,9 +5,9 @@
     <p class="content">less test</p>
     <p class="content">{{cnt}}</p>
 
-    <div class="btn" @click="debounce">click test debounce</div>
+    <div @click="debounce" class="btn">click test debounce</div>
 
-    <div class="btn" @click="throttles">click test throttles</div>
+    <div @click="throttles" class="btn">click test throttles</div>
   </div>
 </template>
 
@@ -43,15 +43,15 @@ export default {
 <style lang="less" scoped>
 .about {
   h1 {
-    font-size: 34 / @q;
+    font-size: 34px;
   }
   .content {
     color: @title-color;
   }
 
   .btn {
-    height: 50 / @q;
-    font-size: 30 / @q;
+    height: 50 px;
+    font-size: 30 px;
     color: #000;
 
     &:hover {

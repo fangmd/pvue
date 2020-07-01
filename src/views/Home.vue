@@ -26,6 +26,10 @@ export default {
 
 <style lang="less" scoped>
 .head-one {
-  font-size: 50 / @q;
+  height: 75px;
+  font-size: 54px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 1);
+  line-height: 75px;
 }
 </style>
