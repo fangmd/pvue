@@ -1,8 +1,7 @@
 const path = require('path');
 const CompressionPlugin = require('compression-webpack-plugin');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
-  .BundleAnalyzerPlugin;
+const TersetPlugin = require('terser-webpack-plugin');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 // const selfSigned = require('openssl-self-signed-certificate');
 
 module.exports = {
@@ -32,8 +31,8 @@ module.exports = {
         })
       );
       config.optimization.minimizer.push(
-        new UglifyJsPlugin({
-          uglifyOptions: {
+        new TersetPlugin({
+          terserOptions: {
             warnings: false,
             compress: {
               drop_debugger: true,
