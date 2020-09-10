@@ -14,7 +14,7 @@
     "axios": "^0.20.0",
     "core-js": "^3.6.5",
     "fastclick": "^1.0.6",
-    "jsqr": "^1.2.0",
+    "json-bigint": "^1.0.0",
     "lodash": "^4.17.15",
     "mockjs": "^1.0.1-beta3",
     "normalize.css": "^8.0.1",

@@ -1,8 +1,8 @@
-import Vue from 'vue';
-import Router from 'vue-router';
-import Home from './views/Home.vue';
+import Vue from 'vue'
+import Router from 'vue-router'
+import Home from '../views/Home.vue'
 
-Vue.use(Router);
+Vue.use(Router)
 
 // 解决ElementUI导航栏中的vue-router在3.0版本以上重复点菜单报错问题
 // const routerPush = Router.prototype.push;
@@ -26,10 +26,5 @@ export default new Router({
       name: 'about',
       component: () => import('@/views/About.vue'),
     },
-    {
-      path: '/scan',
-      name: 'ScanDemo',
-      component: () => import('@/views/demo/Scan.vue'),
-    },
   ],
-});
+})

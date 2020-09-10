@@ -8,8 +8,8 @@
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue';
-import { common } from '@/api';
+import HelloWorld from '@/components/HelloWorld.vue'
+import { common } from '@/api'
 
 export default {
   name: 'home',
@@ -18,10 +18,10 @@ export default {
   },
   mounted() {
     common.getUser().then(resp => {
-      console.log('TCL: mounted -> resp', resp);
-    });
+      console.log('TCL: mounted -> resp', resp)
+    })
   },
-};
+}
 </script>
 
 <style lang="less" scoped>

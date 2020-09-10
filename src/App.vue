@@ -5,13 +5,13 @@
 </template>
 
 <script>
-import FastClick from 'fastclick';
+import FastClick from 'fastclick'
 export default {
   name: 'app',
   created() {
-    FastClick.attach(document.body);
+    FastClick.attach(document.body)
   },
-};
+}
 </script>
 
 <style lang="less">

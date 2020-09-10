@@ -3,7 +3,7 @@
     <h1>This is an about page</h1>
 
     <p class="content">less test</p>
-    <p class="content">{{cnt}}</p>
+    <p class="content">{{ cnt }}</p>
 
     <div @click="debounce" class="btn">click test debounce</div>
 
@@ -13,13 +13,13 @@
 
 <script>
 // import { common } from '@/api';
-import _ from 'lodash';
+import _ from 'lodash'
 
 export default {
   data() {
     return {
       cnt: 0,
-    };
+    }
   },
   mounted() {
     // const a = 'asd';
@@ -30,14 +30,14 @@ export default {
   },
   methods: {
     debounce: _.debounce(function() {
-      console.log('debounce');
+      console.log('debounce')
     }, 3000),
     throttles: _.throttle(function() {
-      this.cnt++;
-      console.log('throttles' + this.cnt);
+      this.cnt++
+      console.log('throttles' + this.cnt)
     }, 3000),
   },
-};
+}
 </script>
 
 <style lang="less" scoped>
