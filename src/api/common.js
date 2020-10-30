@@ -1,7 +1,7 @@
-import axios from '@/request';
+import axios from '@/request'
 
 export default {
   getUser() {
-    return axios.get('/user');
+    return axios.get('/user')
   },
-};
+}

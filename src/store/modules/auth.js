@@ -6,8 +6,8 @@ export default {
   getters: {},
   mutations: {
     setName(state, payload) {
-      state.name = payload;
+      state.name = payload
     },
   },
   actions: {},
-};
+}

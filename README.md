@@ -19,3 +19,4 @@ npm run build
 - [x] 项目包体积分析: webpack-bundle-analyzer
 - [x] less
 - [ ] doc vscode 推荐配置
+

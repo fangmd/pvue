@@ -1,2 +1,2 @@
-import common from './common';
-export { common };
+import common from './common'
+export { common }
