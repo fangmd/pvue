@@ -17,7 +17,7 @@ export default {
     HelloWorld,
   },
   mounted() {
-    common.getUser().then(resp => {
+    common.getUser().then((resp) => {
       console.log('TCL: mounted -> resp', resp)
     })
   },

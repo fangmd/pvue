@@ -29,7 +29,7 @@ process.env.VUE_APP_BUILDTIME = new Date().toString() + getGitVersionInfo()
 module.exports = {
   //publicPath: '/dist/',
   assetsDir: 'static',
-  chainWebpack: config => {
+  chainWebpack: (config) => {
     config.module
       .rule('images')
       .test(/\.(png|jpg|jpeg|gif|svg|svgz)$/i)
@@ -39,7 +39,7 @@ module.exports = {
         bypassOnDebug: true,
       })
   },
-  configureWebpack: config => {
+  configureWebpack: (config) => {
     if (process.env.NODE_ENV === 'production') {
       if (process.env.ANALYZ_ENV) {
         config.plugins.push(new BundleAnalyzerPlugin())

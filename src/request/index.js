@@ -20,7 +20,7 @@ var instance = axios.create({
   },
   // 解决相应数据 bingint 精度丢失问题
   transformResponse: [
-    function(data) {
+    function (data) {
       /* eslint-disable no-undef */
       try {
         return JSONbigString.parse(data)
@@ -37,7 +37,7 @@ var instance = axios.create({
 
 // 请求拦截器
 instance.interceptors.request.use(
-  config => {
+  (config) => {
     let headers = createHeader()
     for (let i in headers) {
       config.headers[i] = headers[i]
@@ -45,7 +45,7 @@ instance.interceptors.request.use(
 
     return config
   },
-  error => {
+  (error) => {
     return Promise.reject(error)
   }
 )
@@ -53,7 +53,7 @@ instance.interceptors.request.use(
 // 响应拦截器
 instance.interceptors.response.use(
   // 请求成功
-  res => {
+  (res) => {
     if (res.status === 200) {
       return Promise.resolve(res)
     } else {
@@ -61,7 +61,7 @@ instance.interceptors.response.use(
     }
   },
   // 请求失败
-  error => {
+  (error) => {
     const { response } = error
     return Promise.reject(response)
   }

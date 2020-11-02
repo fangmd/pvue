@@ -29,10 +29,10 @@ export default {
     //   .catch(error => {});
   },
   methods: {
-    debounce: _.debounce(function() {
+    debounce: _.debounce(function () {
       console.log('debounce')
     }, 3000),
-    throttles: _.throttle(function() {
+    throttles: _.throttle(function () {
       this.cnt++
       console.log('throttles' + this.cnt)
     }, 3000),
