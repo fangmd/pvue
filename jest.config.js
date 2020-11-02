@@ -20,4 +20,4 @@ module.exports = {
   collectCoverageFrom: ['**/*.{js,vue}', '!**/node_modules/**'],
   coverageReporters: ['html', 'text-summary'],
   watchPlugins: ['jest-watch-typeahead/filename', 'jest-watch-typeahead/testname'],
-};
+}
