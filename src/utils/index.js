@@ -1,3 +1,4 @@
 import common from './common'
+import CookieUtils from './cookie-utils'
 
-export { common }
+export { common, CookieUtils }
