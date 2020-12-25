@@ -20,3 +20,7 @@ npm run build
 - [x] less
 - [ ] doc vscode 推荐配置
 
+
+# 其他
+
+1. 如果 `image-webpack-loader` 报错， 请执行：`npm rebuild`
